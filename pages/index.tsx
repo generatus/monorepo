@@ -200,7 +200,7 @@ const Home: NextPage = () => {
               </h2>
 
               <div>
-                Easily create NFT collections by uploading nd testing your
+                Easily create NFT collections by uploading and testing your
                 generative art script. We’ll handle minting.
               </div>
             </div>
@@ -252,7 +252,7 @@ const Home: NextPage = () => {
               </h2>
 
               <div>
-                Easily create NFT collections by uploading nd testing your
+                Easily create NFT collections by uploading and testing your
                 generative art script. We’ll handle minting.
               </div>
             </div>
