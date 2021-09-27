@@ -1,6 +1,6 @@
 const Nav = () => {
   return (
-    <nav className="flex justify-between items-center p-5">
+    <nav className="flex justify-between items-center p-5 max-w-screen-xl mx-auto">
       <div>generatus</div>
 
       <div>

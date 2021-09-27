@@ -5,3 +5,7 @@
 body {
   @apply bg-brand-black text-brand-gray-light;
 }
+
+a:hover {
+  @apply text-brand-blue transition duration-300 ease-in-out;
+}
