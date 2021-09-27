@@ -1,6 +1,11 @@
+import { useEffect, useState, useRef } from 'react'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+// @ts-ignore
+import { gsap } from 'gsap/dist/gsap'
+// @ts-ignore
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 
 import Nav from 'components/Nav'
 import FeatureCard from 'components/FeatureCard'
@@ -37,6 +42,89 @@ const FeatureCards = [
 ]
 
 const Home: NextPage = () => {
+  const dropTimeSectionRef = useRef<HTMLDivElement>(null)
+  gsap.registerPlugin(ScrollTrigger)
+
+  useEffect(() => {
+    const dropTimeSection = dropTimeSectionRef.current
+
+    if (!dropTimeSection) return
+
+    gsap.fromTo(
+      dropTimeSection.querySelector('.time-header-1'),
+      {
+        opacity: 0,
+        marginTop: '-55px',
+      },
+      {
+        marginTop: 0,
+        opacity: 0.2,
+        scrollTrigger: {
+          trigger: dropTimeSection,
+          pin: true,
+          scrub: true,
+          start: 'top top',
+          end: '+=100%',
+        },
+      }
+    )
+
+    gsap.fromTo(
+      dropTimeSection.querySelector('.time-header-2'),
+      {
+        opacity: 0,
+        marginTop: '-55px',
+      },
+      {
+        marginTop: 0,
+        opacity: 0.4,
+        scrollTrigger: {
+          trigger: dropTimeSection,
+          pin: true,
+          scrub: true,
+          start: 'top top',
+          end: '+=100%',
+        },
+      }
+    )
+
+    gsap.fromTo(
+      dropTimeSection.querySelector('.time-header-3'),
+      {
+        opacity: 0,
+        marginTop: '-55px',
+      },
+      {
+        marginTop: 0,
+        opacity: 0.6,
+        scrollTrigger: {
+          trigger: dropTimeSection,
+          pin: true,
+          scrub: true,
+          start: 'top top',
+          end: '+=100%',
+        },
+      }
+    )
+
+    gsap.fromTo(
+      dropTimeSection.querySelector('.time-header-4'),
+      {
+        marginTop: '-55px',
+      },
+      {
+        marginTop: 0,
+        scrollTrigger: {
+          trigger: dropTimeSection,
+          pin: true,
+          scrub: true,
+          start: 'top top',
+          end: '+=100%',
+        },
+      }
+    )
+  }, [])
+
   return (
     <>
       <Head>
@@ -130,7 +218,10 @@ const Home: NextPage = () => {
           </div>
         </section>
 
-        <section className="grid grid-cols-2 max-w-screen-xl mx-auto my-40">
+        <section
+          ref={dropTimeSectionRef}
+          className="grid grid-cols-2 max-w-screen-xl mx-auto my-40"
+        >
           <div
             className="pl-0.5 bg-no-repeat py-40 xl:bg-none"
             style={{
@@ -144,19 +235,19 @@ const Home: NextPage = () => {
 
           <div className="p-20 flex justify-center items-center">
             <div>
-              <h2 className="font-bold text-3xl text-white mb-5 opacity-20">
+              <h2 className="font-bold text-3xl text-white mb-5 opacity-20 time-header-1">
                 Once per day
               </h2>
 
-              <h2 className="font-bold text-3xl text-white mb-5 opacity-40">
+              <h2 className="font-bold text-3xl text-white mb-5 opacity-40 time-header-2">
                 Once per week
               </h2>
 
-              <h2 className="font-bold text-3xl text-white mb-5 opacity-60">
+              <h2 className="font-bold text-3xl text-white mb-5 opacity-60 time-header-3">
                 All at once
               </h2>
 
-              <h2 className="font-bold text-3xl text-white mb-5">
+              <h2 className="font-bold text-3xl text-white mb-5 time-header-4">
                 Time your drop.
               </h2>
 
