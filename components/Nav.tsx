@@ -1,5 +1,6 @@
 import * as web3 from '@solana/web3.js';
 import {useState, useEffect} from 'react'
+import { useRouter } from 'next/router'
 
 const getProvider = () => {
   if ("solana" in window) {
@@ -13,13 +14,14 @@ const getProvider = () => {
 
 const Nav = () => {
   const [account, setAccount] = useState()
+  const router = useRouter();
 
   const login = () => {
     const provider = getProvider();
     if (provider) {
       provider.on("connect", () => {
         setAccount(provider.publicKey.toString())
-        // TODO: redirect to main page
+        router.push('/onboarding')
       })
       
       provider.connect()
