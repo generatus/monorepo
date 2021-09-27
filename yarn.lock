@@ -425,6 +425,11 @@ ajv@^8.0.1:
     require-from-string "^2.0.2"
     uri-js "^4.2.2"
 
+animejs@^3.0.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/animejs/-/animejs-3.2.1.tgz#de9fe2e792f44a777a7fdf6ae160e26604b0cdda"
+  integrity sha512-sWno3ugFryK5nhiDm/2BKeFCpZv7vzerWUcUPyAZLDhMek3+S/p418ldZJbJXo5ZUOpfm2kP2XRO4NJcULMy9A==
+
 anser@1.4.9:
   version "1.4.9"
   resolved "https://registry.yarnpkg.com/anser/-/anser-1.4.9.tgz#1f85423a5dcf8da4631a341665ff675b96845760"
@@ -3124,6 +3129,13 @@ raw-body@2.4.1:
     http-errors "1.7.3"
     iconv-lite "0.4.24"
     unpipe "1.0.0"
+
+react-animejs@^0.5.6:
+  version "0.5.6"
+  resolved "https://registry.yarnpkg.com/react-animejs/-/react-animejs-0.5.6.tgz#2550b6b61cc1cdbe30340a386f582b7749f01f39"
+  integrity sha512-d3unriMVPsMSxG9cBXsoJyCL/+8CqRXdkFYblXGszlJdiDFAPLKbcT4A9H3J3BYrNRcGnIOh1UY76IUTHcY+fg==
+  dependencies:
+    animejs "^3.0.1"
 
 react-dom@17.0.2:
   version "17.0.2"
