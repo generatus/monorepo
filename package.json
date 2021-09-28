@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@solana/web3.js": "^1.29.1",
     "gsap": "^3.7.1",
     "next": "11.1.2",
     "react": "17.0.2",
