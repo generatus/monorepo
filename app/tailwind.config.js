@@ -7,6 +7,7 @@ module.exports = {
         'brand-black': '#171A1F',
         'brand-blue': '#436ADD',
         'brand-blue-light': '#B5C8F1',
+        'brand-blue-bright': '#28DDF6',
         'brand-gray': '#272B34',
         'brand-gray-light': '#B3BDCC',
       },

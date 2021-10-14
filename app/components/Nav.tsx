@@ -31,9 +31,13 @@ const Nav = () => {
 
   return (
     <nav className="flex justify-between items-center p-5 max-w-screen-xl mx-auto">
-      <div>generatus</div>
+      <div className="text-white">generatus</div>
 
-      <div>{account ? account : <button onClick={login}>Log in</button>}</div>
+      {/* <div>{account ? account : <button onClick={login}>Log in</button>}</div> */}
+
+      <div className="bg-brand-blue rounded-xl text-white py-2 px-3">
+        coming soon
+      </div>
     </nav>
   )
 }

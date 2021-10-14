@@ -9,9 +9,9 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 
 import Nav from 'components/Nav'
 import FeatureCard from 'components/FeatureCard'
-import SampleStorefront from 'public/demo/storefront.png'
-import MintScript from 'public/demo/mint-script.png'
-import MintSchedule from 'public/demo/mint-schedule.png'
+import SampleStorefront from 'public/demo/storefront.jpg'
+import MintScript from 'public/demo/mint-script.jpg'
+import MintSchedule from 'public/demo/mint-schedule.jpg'
 import Solana from 'public/icons/solana.svg'
 import Sun from 'public/icons/sun.svg'
 import Calendar from 'public/icons/calendar.svg'
@@ -143,9 +143,9 @@ const Home: NextPage = () => {
           className="bg-cover bg-no-repeat"
           style={{ backgroundImage: `url(/gradients/dark-gradient-6.jpg)` }}
         >
-          <div className="max-w-screen-xl mx-auto py-10 px-20 text-center">
+          <div className="max-w-screen-xl mx-auto py-10 px-5 md:px-20 text-center">
             <div
-              className="pr-0.5 pl-0.5 bg-no-repeat pb-40"
+              className="pr-0.5 pl-0.5 bg-no-repeat md:pb-40"
               style={{
                 backgroundSize: '0.125rem 100%',
                 backgroundPosition: '0 0, 100% 0',
@@ -153,7 +153,7 @@ const Home: NextPage = () => {
                   linear-gradient(rgba(0,234,255,0), rgba(0,234,255,0.5), rgba(0,37,206,0.04))`,
               }}
             >
-              <h1 className="font-bold text-5xl text-white w-2/3 mx-auto mb-10">
+              <h1 className="font-bold text-3xl md:text-5xl text-white w-2/3 mx-auto mb-10">
                 The generative NFT storefront to match your personality
               </h1>
 
@@ -179,7 +179,7 @@ const Home: NextPage = () => {
             <div>Designed for generative artists to sell their work</div>
           </div>
 
-          <div className="grid grid-cols-3 gap-10 mt-10">
+          <div className="grid md:grid-cols-3 gap-10 mt-10">
             {FeatureCards.map(({ id, title, description, icon, alt }) => (
               <FeatureCard
                 key={id}
@@ -192,8 +192,8 @@ const Home: NextPage = () => {
           </div>
         </section>
 
-        <section className="grid grid-cols-2 max-w-screen-xl mx-auto">
-          <div className="p-20 flex justify-center items-center">
+        <section className="grid md:grid-cols-2 max-w-screen-xl mx-auto">
+          <div className="p-10 md:p-20 flex justify-center items-center">
             <div>
               <h2 className="font-bold text-3xl text-white mb-5">
                 Write a generative art script. We’ll handle the rest.
@@ -207,7 +207,7 @@ const Home: NextPage = () => {
           </div>
 
           <div
-            className="pr-0.5 bg-no-repeat py-40"
+            className="pr-0.5 bg-no-repeat py-10 md:py-40"
             style={{
               backgroundSize: '0.125rem 100%',
               backgroundPosition: '100% 0, 100% 0',
@@ -220,10 +220,10 @@ const Home: NextPage = () => {
 
         <section
           ref={dropTimeSectionRef}
-          className="grid grid-cols-2 max-w-screen-xl mx-auto my-40"
+          className="grid md:grid-cols-2 max-w-screen-xl mx-auto my-40"
         >
           <div
-            className="pl-0.5 bg-no-repeat py-40 xl:bg-none"
+            className="pl-0.5 bg-no-repeat hidden md:block py-40 xl:bg-none"
             style={{
               backgroundSize: '0.125rem 100%',
               backgroundPosition: '0 0, 0 0',
@@ -233,7 +233,7 @@ const Home: NextPage = () => {
             <Image src={MintSchedule} alt="Scheduling a drop on generatus" />
           </div>
 
-          <div className="p-20 flex justify-center items-center">
+          <div className="p-10 hidden md:p-20 md:flex justify-center items-center">
             <div>
               <h2 className="font-bold text-3xl text-white mb-5 opacity-20 time-header-1">
                 Once per day
@@ -257,10 +257,46 @@ const Home: NextPage = () => {
               </div>
             </div>
           </div>
+
+          <div className="p-10 md:p-20 flex justify-center items-center">
+            <div>
+              <h2 className="font-bold text-3xl text-white mb-5 opacity-20">
+                Once per day
+              </h2>
+
+              <h2 className="font-bold text-3xl text-white mb-5 opacity-40">
+                Once per week
+              </h2>
+
+              <h2 className="font-bold text-3xl text-white mb-5 opacity-60">
+                All at once
+              </h2>
+
+              <h2 className="font-bold text-3xl text-white mb-5">
+                Time your drop.
+              </h2>
+
+              <div>
+                Easily create NFT collections by uploading and testing your
+                generative art script. We’ll handle minting.
+              </div>
+            </div>
+          </div>
+
+          <div
+            className="pl-0.5 bg-no-repeat py-10 md:hidden xl:bg-none"
+            style={{
+              backgroundSize: '0.125rem 100%',
+              backgroundPosition: '0 0, 0 0',
+              backgroundImage: `linear-gradient(rgba(0,234,255,0), rgba(0,234,255,0.5), rgba(0,37,206,0.04))`,
+            }}
+          >
+            <Image src={MintSchedule} alt="Scheduling a drop on generatus" />
+          </div>
         </section>
       </main>
 
-      <footer className="flex justify-center items-center p-10 pt-0 max-w-screen-xl mx-auto">
+      <footer className="hidden md:flex justify-center items-center p-10 pt-0 max-w-screen-xl mx-auto">
         <a href="https://solana.com/" target="_blank" rel="noopener noreferrer">
           Powered by Solana
         </a>
