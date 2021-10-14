@@ -141,7 +141,7 @@ const Home: NextPage = () => {
       <main className="mt-20">
         <header
           className="bg-cover bg-no-repeat"
-          style={{ backgroundImage: `url(/gradients/dark-gradient-6.png)` }}
+          style={{ backgroundImage: `url(/gradients/dark-gradient-6.jpg)` }}
         >
           <div className="max-w-screen-xl mx-auto py-10 px-20 text-center">
             <div
