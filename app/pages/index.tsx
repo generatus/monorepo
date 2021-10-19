@@ -258,7 +258,7 @@ const Home: NextPage = () => {
             </div>
           </div>
 
-          <div className="p-10 md:p-20 flex justify-center items-center">
+          <div className="p-10 md:p-20 flex md:hidden justify-center items-center">
             <div>
               <h2 className="font-bold text-3xl text-white mb-5 opacity-20">
                 Once per day
