@@ -1,0 +1,11 @@
+# Repository settings for monorepo
+# This configures the default base branch for pull requests
+
+repository:
+  # The default branch for PRs should target staging
+  default_branch: staging
+
+# Pull request settings
+pullRequests:
+  # Always use staging as the base branch for PRs
+  baseBranch: staging
